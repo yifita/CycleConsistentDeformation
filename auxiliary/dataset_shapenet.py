@@ -30,6 +30,7 @@ class ShapeNetSeg(data.Dataset):
                  data_augmentation_Z_rotation=False, data_augmentation_Z_rotation_range=360,
                  data_augmentation_3D_rotation=False, random_translation=False, anisotropic_scaling=False,
                  shuffle=False, get_single_shape=False):
+        self.isV2 = "v2" in root
         self.dataset_string_args = str(mode) + "_" + \
                                    str(class_choice) + \
                                    "_" + str(num_samples) + \

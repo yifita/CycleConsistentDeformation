@@ -74,6 +74,7 @@ def parser():
     parser.add_argument('--reload', type=int, default=0, choices=[0, 1], )
 
     # Eval parameters
+    parser.add_argument('--output_dir', type=str, default="./figures/forward_input_target/")
     parser.add_argument('--number_points_eval', type=int, default=5000, help='Number of point sampled on the object')
     parser.add_argument('--num_shots_eval', type=int, default=50000, help='Number of train samples to take labels from')
     parser.add_argument('--num_figure_3_4', type=int, default=-1, help='Number of examples to save')
@@ -85,10 +86,12 @@ def parser():
     parser.add_argument('--atlasPatch_path', type=str, default="", help="path to Atlasnet models")
     parser.add_argument('--train_atlasnet', type=int, default=0, choices=[0, 1], help="train atlasnet or main models")
     parser.add_argument('--atlasnet', type=str, default="SPHERE", choices=['SPHERE', 'PATCH'], )
+    parser.add_argument('--eval_list', type=str, default="", help="Path to list of input and ouput in forward_input_output.py" )
     parser.add_argument('--eval_source', type=str, default="", help="Path to input and ouput in forward_input_output.py" )
     parser.add_argument('--eval_target', type=str, default="", help="Path to input and ouput in forward_input_output.py" )
     parser.add_argument('--eval_get_criterions_for_shape', type=str, default="", help="Path to input and ouput in forward_input_output.py" )
     parser.add_argument('--shapenetv1_path', type=str, default="", help="Path to shapenet v1" )
+    parser.add_argument('--shapenetv2_path', type=str, default="", help="Path to shapenet v2" )
     parser.add_argument('--dest_folder', type=str, default="./html/",
                         help="folder to store global results of all experiments")
 

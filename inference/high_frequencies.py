@@ -5,7 +5,7 @@ import torch
 import os
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-sys.path.append(BASE_DIR + "/../")
+sys.path.append(BASE_DIR + "/../auxiliary")
 
 import normalize_points
 import useful_losses as loss
@@ -81,4 +81,4 @@ def high_frequency_propagation(source_path, source_deformed_path, target_path):
 
 if __name__ == '__main__':
     high_frequency_propagation(sys.argv[1], sys.argv[2], sys.argv[3])
-# main(sys.argv[1])
+    # main(sys.argv[1])
